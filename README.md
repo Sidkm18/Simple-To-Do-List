@@ -1,4 +1,4 @@
-# 📝 ADHD Task Manager
+### 📝 ADHD Task Manager
 
 
 A minimalist, distraction-friendly task management tool designed to keep your focus sharp and your study sessions productive. Built with HTML, CSS, and JavaScript, it lets you quickly add, complete, and manage tasks while tracking your progress — all saved locally in your browser for easy access without any clutter.
@@ -42,6 +42,10 @@ This tool goes beyond basic task management by providing satisfying UI feedback 
 - Sync with external storage or backend
 - Drag-and-drop task reordering
 
+---
+
 ## 💡 Inspiration
 
 This web tool was created to provide just the right amount of motivation and stimulation to help me stay focused and study effectively.
+
+---
