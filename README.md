@@ -23,5 +23,12 @@ A simple, responsive task management web application built with HTML, CSS, and J
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshot
 
+<img width="1071" alt="Screenshot 2025-05-25 at 14 32 14" src="https://github.com/user-attachments/assets/3548048c-78e1-4a44-9f27-b83795a82761" />
+
+## 📌 Future Improvements
+- Add categories or tags for tasks
+- Implement due dates and reminders
+- Sync with external storage or backend
+- Drag-and-drop task reordering
