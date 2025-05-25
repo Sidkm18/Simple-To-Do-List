@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHD Super Dopamine Todo List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-animation"></div>
+  
+  <div class="container">
+    <div class="app-header">
+      <h1>ADHD Super Todo List</h1>
+      <div class="tagline">Turn tasks into dopamine rewards! 🚀</div>
+    </div>
+    
+    <div class="controls-panel">
+      <div class="theme-controls">
+        <div class="theme-label">Color Theme:</div>
+        <div class="theme-buttons">
+          <div class="theme-btn active" data-theme="default"></div>
+          <div class="theme-btn" data-theme="purple"></div>
+          <div class="theme-btn" data-theme="orange"></div>
+          <div class="theme-btn" data-theme="green"></div>
+          <div class="theme-btn" data-theme="red"></div>
+        </div>
+      </div>
+      
+      <div class="sound-toggle">
+        <div class="sound-icon">🔊</div>
+        <div class="toggle-track active">
+          <div class="toggle-thumb"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-title">Daily Streak</div>
+        <div class="stat-value streak-value">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Tasks Completed</div>
+        <div class="stat-value completed-value">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Completion Rate</div>
+        <div class="stat-value rate-value">0%</div>
+      </div>
+    </div>
+    
+    <div class="progress-label">
+      <span>Today's Progress</span>
+      <span class="progress-percentage">0%</span>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    
+    <div class="task-panel">
+      <form class="task-form">
+        <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+        <button type="submit" id="add-btn">ADD</button>
+      </form>
+    </div>
+    
+    <div class="task-list-container">
+      <div class="list-header">
+        <div class="list-title">My Tasks</div>
+        <div class="filter-options">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+      
+      <div class="empty-state">
+        <div class="empty-icon">📝</div>
+        <div class="empty-text">Add your first task above!</div>
+      </div>
+      
+      <ul class="task-list"></ul>
+    </div>
+  </div>
+  
+  <div class="confetti-container"></div>
+  
+  <div class="reward-popup">
+    <div class="reward-icon">🎉</div>
+    <div class="reward-title">Good Job!</div>
+    <div class="reward-message">You completed a task and earned a dopamine boost!</div>
+    <button class="reward-button">AWESOME!</button>
+  </div>
+  <script src="script.js"></script>
+  
