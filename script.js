@@ -82,7 +82,6 @@ function saveTasks() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
   updateTasksUI();
 }
-
 // Update streak
 function updateStreak() {
   const today = new Date().toLocaleDateString();
@@ -732,3 +731,45 @@ document.addEventListener('click', function resumeAudio() {
   }
   document.removeEventListener('click', resumeAudio);
 }, { once: true });
+
+//To Clear 
+function clearTasks() {
+    const confirmed = confirm("Are you sure you want to clear all tasks? This action cannot be undone.");
+    if (confirmed) {
+      // Clear localStorage
+      localStorage.removeItem('tasks');
+  
+      // Clear in-memory tasks array
+      tasks = [];
+  
+      // Clear tasks from UI
+      const tasksContainer = document.getElementById('tasks');
+      if (tasksContainer) {
+        tasksContainer.innerHTML = '';
+      }
+  
+      // Reset related counters if needed
+      completedCount = 0;
+      totalTasksCreated = 0;
+      streak = 0;
+      lastCompletedDate = null;
+  
+      // Also update localStorage for other keys if you want to reset everything:
+      localStorage.setItem('completedCount', completedCount);
+      localStorage.setItem('totalTasksCreated', totalTasksCreated);
+      localStorage.setItem('streak', streak);
+      localStorage.removeItem('lastCompletedDate');
+  
+      // Optionally update UI counters if you have elements showing them
+      updateTasksUI();
+      updateStats();
+
+    }
+  }
+  
+  function updateCountersUI() {
+    // Example: update streak and counts display elements
+    document.getElementById('streak').textContent = streak;
+    document.getElementById('completedCount').textContent = completedCount;
+    document.getElementById('totalTasksCreated').textContent = totalTasksCreated;
+  }
